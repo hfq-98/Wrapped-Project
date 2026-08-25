@@ -182,3 +182,60 @@ h1 {
 
 .tap-left { left: 0; width: 30%; }
 .tap-right { right: 0; width: 70%; }
+/* Intro Slide Custom Styling */
+.intro-badge-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.glow-avatar-badge {
+  font-size: 2.2rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  padding: 0.8rem 1.8rem;
+  box-shadow: 0 0 25px rgba(37, 211, 102, 0.35);
+  animation: pulseGlow 2.5s infinite ease-in-out;
+  letter-spacing: 0.2rem;
+}
+
+.intro-highlight-text {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #e2e8f0;
+  padding: 0 0.5rem;
+}
+
+.intro-highlight-text strong {
+  color: #25d366;
+  font-size: 1.3rem;
+}
+
+.intro-sub-card {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.85rem 1.2rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  width: 100%;
+}
+
+.intro-sub-card strong {
+  color: #f1f5f9;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.2);
+  }
+  50% {
+    transform: scale(1.04);
+    box-shadow: 0 0 35px rgba(37, 211, 102, 0.5);
+  }
+}

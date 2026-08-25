@@ -30,7 +30,26 @@ document.addEventListener("DOMContentLoaded", async () => {
     const p2Data = data.participants[p2] || {};
 
     return [
-      // Slide 1: General Stats with Full Date Span
+      // Slide 1: 18-Year Friendship Intro
+    {
+      tag: "🤝 18 Years in the Making",
+      title: "Since 3rd Grade",
+      subtitle: `${p1} & ${p2} • 18 Years of Friendship`,
+      body: `
+        <div class="intro-badge-container">
+          <div class="glow-avatar-badge">🎒 ➔ 🎮 ➔ 📱</div>
+          <p class="intro-highlight-text">
+            18 years of inside jokes, endless banter, and life updates — broken down into 
+            <strong>${(data.summary?.total_messages || data.total_messages || 0).toLocaleString()}</strong> messages.
+          </p>
+          <div class="intro-sub-card">
+            <span>📅 WhatsApp Archive: <strong>${data.summary?.start_date || "Start"}</strong> to <strong>${data.summary?.end_date || "Now"}</strong></span>
+          </div>
+        </div>
+      `,
+      footer: "Tap right to unwrap the stats →"
+    },
+      // Slide 2: General Stats with Full Date Span
       {
         tag: "✨ Wrapped Overview",
         title: "Every Message.<br>Every Memory.",
@@ -44,7 +63,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         `,
         footer: "Tap right to continue →"
       },
-      // Slide 2: Chat Dynamics
+      // Slide 3: Chat Dynamics
       {
         tag: "💬 Chat Dynamics",
         title: "Who Talked More?",
@@ -65,7 +84,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         `,
         footer: "Tap to continue • Hold to pause"
       },
-      // Slide 3: Timing, Night Owls & Calls
+      // Slide 4: Timing, Night Owls & Calls
       {
         tag: "🌙 Timing & Habits",
         title: "Peak Hour Vibes.",
@@ -85,7 +104,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         `,
         footer: "Tap to continue"
       },
-      // Slide 4: Signature Emojis
+      // Slide 5: Signature Emojis
       {
         tag: "👀 Signature Reactions",
         title: "Top Emojis.",
@@ -100,7 +119,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         `,
         footer: "Tap to continue"
       },
-      // Slide 5: Signature Vocabulary
+      // Slide 6: Signature Vocabulary
       {
         tag: "🗣️ Signature Words",
         title: "Top Vocabulary.",
