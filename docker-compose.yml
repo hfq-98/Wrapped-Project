@@ -1,0 +1,7 @@
+services:
+  wrapped-app:
+    build: .
+    container_name: chat-wrapped
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
