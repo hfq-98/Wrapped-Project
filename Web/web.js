@@ -21,44 +21,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   } catch (err) {
     slidesContainer.innerHTML = `<div class="slide active"><p>Error loading data.json</p></div>`;
   }
-  
-  function generateHourlyChartHTML(hourlyData = {}) {
-  const values = Object.values(hourlyData);
-  const maxVal = Math.max(...values, 1);
-
-  let peakHour = 0;
-  let peakCount = 0;
-  Object.entries(hourlyData).forEach(([hr, count]) => {
-    if (count > peakCount) {
-      peakCount = count;
-      peakHour = hr;
-    }
-  });
-
-  const formattedPeak = peakHour >= 12
-    ? `${peakHour == 12 ? 12 : peakHour - 12}:00 PM`
-    : `${peakHour == 0 ? 12 : peakHour}:00 AM`;
-
-  const bars = Object.entries(hourlyData).map(([hour, count]) => {
-    const heightPct = Math.round((count / maxVal) * 100);
-    const showLabel = [0, 6, 12, 18, 23].includes(Number(hour));
-    const labelText = showLabel ? (hour == 0 ? "12A" : hour == 12 ? "12P" : `${hour}`) : "";
-
-    return `
-      <div class="bar-wrapper" title="${hour}:00 - ${count} msgs">
-        <div class="bar" style="height: ${Math.max(heightPct, 4)}%;"></div>
-        <span class="bar-label">${labelText}</span>
-      </div>
-    `;
-  }).join("");
-
-  return `
-    <div class="chart-container">
-      <div class="chart-bars">${bars}</div>
-      <div class="peak-badge">⚡ Peak Chat Time: <strong>${formattedPeak}</strong> (${peakCount.toLocaleString()} msgs)</div>
-    </div>
-  `;
-}
 
   function buildSlides(data) {
     const participants = Object.keys(data.participants);
@@ -141,18 +103,11 @@ document.addEventListener("DOMContentLoaded", async () => {
           </div>
         `,
         footer: "Tap to continue"
-},
-    {
-      tag: "⏰ 24-Hour Rhythm",
-      title: "When We Talk",
-      subtitle: `${p1} & ${p2} • Daily Chat Intensity`,
-      body: generateHourlyChartHTML(data.hourly_distribution || {}),
-      footer: "Tap right to continue →"
-    },
-    // Slide 5: Signature Emojis
-    {
-      tag: "👀 Signature Reactions",
-      title: "Top Emojis.",
+      },
+      // Slide 5: Signature Emojis
+      {
+        tag: "👀 Signature Reactions",
+        title: "Top Emojis.",
         subtitle: "The most frequent expressions used.",
         body: `
           <div class="stat-card">
