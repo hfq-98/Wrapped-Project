@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Wrapped Story</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Optional Background Audio -->
+  <audio id="bg-audio" loop preload="auto" src="assets/music.mp3"></audio>
+
+  <div class="story-container" id="story-container">
+    <!-- Progress Bars -->
+    <div class="progress-bar-container" id="progress-bars"></div>
+
+    <!-- Music Indicator -->
+    <div class="audio-toggle" id="audio-toggle">🎵</div>
+
+    <!-- Slides Container -->
+    <div class="slides" id="slides-container">
+      <!-- Generated dynamically by app.js -->
+    </div>
+
+    <!-- Navigation Tap Areas -->
+    <div class="tap-target tap-left" id="tap-left"></div>
+    <div class="tap-target tap-right" id="tap-right"></div>
+  </div>
+
+  <script src="web.js"></script>
+</body>
+</html>

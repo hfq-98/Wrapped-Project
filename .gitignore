@@ -1,0 +1,15 @@
+# Exclude private raw chats & exports
+Sample_chat.txt
+sample_chat.txt
+_chat.txt
+*.txt
+*.zip
+
+# Exclude audio / media
+*.mp3
+*.wav
+
+# Python cache & virtual environments
+__pycache__/
+*.pyc
+.env

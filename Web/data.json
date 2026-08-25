@@ -1,0 +1,61 @@
+{
+  "summary": {
+    "start_date": "2018-09-25",
+    "end_date": "2026-07-06",
+    "total_messages": 41938,
+    "total_media": 2544,
+    "total_calls": 268,
+    "total_days_active": 1007,
+    "top_chat_date": [
+      "2021-06-08",
+      632
+    ],
+    "peak_hour": "12:00 PM"
+  },
+  "participants": {
+    "Ahsan": {
+      "messages": 23080,
+      "percentage": 55.0,
+      "total_words": 130271,
+      "avg_words_per_msg": 5.6,
+      "top_emojis": [
+        "🤣",
+        "😂",
+        "😆",
+        "🙄",
+        "😍"
+      ],
+      "top_words": [
+        "mein",
+        "bhai",
+        "rha",
+        "phr",
+        "han"
+      ],
+      "night_owl_msgs": 5420,
+      "day_msgs": 17660
+    },
+    "🤓": {
+      "messages": 18858,
+      "percentage": 45.0,
+      "total_words": 154823,
+      "avg_words_per_msg": 8.2,
+      "top_emojis": [
+        "😂",
+        "♂",
+        "🤣",
+        "🤷",
+        "🙄"
+      ],
+      "top_words": [
+        "mein",
+        "tou",
+        "nai",
+        "bhai",
+        "yeh"
+      ],
+      "night_owl_msgs": 4408,
+      "day_msgs": 14450
+    }
+  }
+}
