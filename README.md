@@ -2,7 +2,7 @@
 
 A containerized client-side web application and data parsing engine that transforms exported chat archives into an animated story recap.
 
-🔗 **Live Production Demo:** [chatwrapped.netlify.app](https://chatwrapped.netlify.app)
+🔗 **Live Production Demo:** [chatwrapped.netlify.app](https://chatwrappedstory.netlify.app)
 
 ---
 
