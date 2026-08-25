@@ -90,6 +90,8 @@ def analyze_chat(messages):
         text = msg["text"]
         date = msg["date"]
         time_str = msg["time"]
+        hour = extract_hour(time_str)
+        hourly_distribution[hour] += 1
 
         # Call & Media Detection
         if any(call_keyword in text.lower() for call_keyword in ["call", "missed voice call", "missed video call", "video call"]):
@@ -163,8 +165,12 @@ def analyze_chat(messages):
             "top_words": top_words,
             "night_owl_msgs": night_chats[p],
             "day_msgs": day_chats[p]
-        }
+       }
 
+    # Hourly distribution across all 24 hours
+    stats["hourly_distribution"] = {str(h): hourly_distribution.get(h, 0) for h in range(24)}
+
+    return stats
     return stats
 
 def find_input_file():
